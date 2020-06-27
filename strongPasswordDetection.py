@@ -6,6 +6,10 @@
 # module used is regular expression
 import re
 
+# The (?=pattern) is known as positive lookahead. 
+#positive lookahead ^(?=.{1,64}@) sets maximum of 64 characters before the '@' sign 
+#VERBOSE This flag allows you to write regular expressions that look nicer and are more readable by allowing you to visually separate logical sections of the pattern and add comments.
+#Whitespace within the pattern is ignored, except when in a character class, or when preceded by an unescaped backslash, or within tokens like *?, 
 passwordRegex = re.compile(r'''(
     ^(?=.*[A-Z].*[A-Z])                # at least two capital letters
     (?=.*[!@#$&*])                     # at least one of these special characters
