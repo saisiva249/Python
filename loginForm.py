@@ -1,7 +1,33 @@
 from  tkinter import *
+import os
+
+def user_not_found():
+    print("user not found")
+
+def delete_loginScreen():
+    loginsucess_Screen.destroy()
+
+def login_success():
+    global loginsucess_Screen
+    loginsucess_Screen = Toplevel(parent_window)
+    loginsucess_Screen.title("Sucess")
+    loginsucess_Screen.geometry("150x100")
+    Label(loginsucess_Screen, text = "Login Sucess").pack()
+    Button(loginsucess_Screen, text="OK", command = delete_loginScreen).pack()
+
 
 def login_verify():
-    print("Login Verify")
+    username = username_verify.get()
+    password = password_verify.get()
+
+    username_entry.delete(0,END)
+    password_entry.delete(0,END)
+
+    if((username != "") and (password != "")):
+        login_success()
+    else:
+        user_not_found()
+
 
 def login():
     global login_screen
@@ -11,18 +37,22 @@ def login():
     Label(login_screen,text="Enter Details in below screen to login").pack()
     Label(login_screen,text="").pack()
 
-    global username
-    global password
+    # these variables are used to bind to the entries for storing and retrieving the values.
+    global username_verify
+    global password_verify
 
-    username=StringVar()
-    password=StringVar()
+    username_verify=StringVar()
+    password_verify=StringVar()
+
+    global username_entry
+    global password_entry
 
     Label(login_screen,text="UserName *").pack()
-    username_entry=Entry(login_screen,textvariable=username)
+    username_entry=Entry(login_screen,textvariable=username_verify)
     username_entry.pack()
 
     Label(login_screen,text="Password *").pack()
-    password_entry=Entry(login_screen,textvariable=password)
+    password_entry=Entry(login_screen,textvariable=password_verify)
     password_entry.pack()
 
     Label(login_screen, text = "").pack()
@@ -39,8 +69,6 @@ def main_Screen():
     Label(text="Welcome Screen", bg="grey", width="300", height="2", font=("calibri",13)).pack()
     Label(text="").pack()
     Button(text="Login", width="30", height="2", command=login).pack()
-    Label(text="").pack()
-    Button(text="Register", width="30", height="2",command=register).pack()
     Label(text="").pack()
     parent_window.mainloop()
 
