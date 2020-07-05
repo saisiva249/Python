@@ -1,5 +1,7 @@
+'''
 @author: venkata sai siva
-"""
+'''
+
 #reading text in each line of a file and print line number at end
 
 filepath = 'sampleText.txt'  
