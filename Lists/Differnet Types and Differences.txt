@@ -1,0 +1,9 @@
+There are 4 differnt types of Lists data types in python
+|----------------------------------------------------------------------|
+|     Name       | Indexed |Symbol |  Ordered  |  Mutable  | Duplicate |
+|----------------|---------|-------|-----------|-----------|-----------|
+|   1.List       |   Yes   |   []  |    Yes    |    Yes    |   Yes     | 
+|   2.Tuple      |   Yes   |   ()  |    Yes    |    No     |   Yes     |
+|   3.Dictionary |   Yes   |   {}  |    No     |    Yes    |   No      | 
+|   4.Sets       |   No    |   {}  |    No     |    No     |   No      | 
+|----------------------------------------------------------------------|
