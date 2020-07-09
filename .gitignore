@@ -1,3 +1,4 @@
 *.pyc
 *.google-cookie
 **/__pycache__/
+*.txt
