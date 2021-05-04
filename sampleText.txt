@@ -7,3 +7,5 @@ tqdm works on any platform
 (Linux, Windows, Mac, FreeBSD, NetBSD, Solaris/SunOS),
 in any console or in a GUI, and is also friendly 
 with IPython/Jupyter notebooks.
+
+Updated Sample text
